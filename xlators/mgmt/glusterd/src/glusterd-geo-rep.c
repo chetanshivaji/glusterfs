@@ -776,6 +776,7 @@ _fcbk_conftodict(char *resbuf, size_t blen, FILE *fp, void *data)
         if (!v)
             return -1;
         if (dict_set_dynstr(dict, resbuf, v) != 0) {
+            
             GF_FREE(v);
             return -1;
         }
@@ -844,6 +845,7 @@ _fcbk_statustostruct(char *resbuf, size_t blen, FILE *fp, void *data)
 
         k = gf_strdup(resbuf);
         if (!k) {
+
             GF_FREE(v);
             return -1;
         }
